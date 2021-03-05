@@ -6,10 +6,13 @@ Java 新手上路，請多指教。
 
 ## 環境  Environment
 1. **Java Environment**
+
 Java|JRE|JVM
 -|:-:|-
 15.0.2|15.0.2+7-27|15.0.2+7-27
+
 2. **IDE**
+
 Without a doubt, the powerful and brilliant **VSCode**!
 
 ## 相關資訊  More Information
