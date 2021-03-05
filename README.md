@@ -14,7 +14,7 @@ Java 新手上路，請多指教。
 
 2. **IDE**
 
-    Undoubtedly, the powerful and brilliant **VSCode**!
+    Undoubtedly, the complicate but brilliant **VSCode**!
 
 ## More Information 相關資訊
 Textbook info : [Java SE 14 技術手冊](http://books.gotop.com.tw/v_ACL059300)
