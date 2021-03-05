@@ -20,7 +20,7 @@ Java 新手上路，請多指教。
 Textbook info : [Java SE 14 技術手冊](http://books.gotop.com.tw/v_ACL059300)
 
 ## Wallpaper  進版圖
-ん？　どうしてさぼってんの？　それじゃあ...あんたを殺すしかないじゃない？
---木津千里
+> ん？　どうしてさぼってんの？　それじゃあ...あんたを殺すしかないじゃない？
+> -- 木津千里
 
 ![image](wallpaper416.jpg)
