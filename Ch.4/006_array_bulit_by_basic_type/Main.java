@@ -64,7 +64,7 @@ public class Main {
         
         /* new a array object and initialize it */
         // int [] data = new int[10]; // since this is a local variable...
-        var data = new int[10]; // equivalent to the code above, after Java SE 10
+        var data = new int[10]; // can use the type "var" after Java SE 10, data will point to "null"
         for (int val : data){
             System.out.printf("%d ", val);
         }
