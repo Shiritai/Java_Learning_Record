@@ -1,10 +1,10 @@
 # Java_Learning_Record
 Learning Java mostly with [Java SE 14 技術手冊](http://books.gotop.com.tw/v_ACL059300)
 
-## 前言  Preface
+## Preface  前言
 Java 新手上路，請多指教。
 
-## 環境  Environment
+## Environment  環境
 
 1. **Java Environment**
 
@@ -16,10 +16,10 @@ Java 新手上路，請多指教。
 
     Undoubtedly, the powerful and brilliant **VSCode**!
 
-## 相關資訊  More Information
+## More Information 相關資訊
 Textbook info : [Java SE 14 技術手冊](http://books.gotop.com.tw/v_ACL059300)
 
-## 進版圖  Wallpaper
+## Wallpaper  進版圖
 まだ終わってないの？　むかつくだな。　もう、しょうがない、あんたを殺すしか...
 --木津千里
 
