@@ -1,5 +1,5 @@
 # Java_Learning_Record
-Learning Java mostly with ***Java SE 14 技術手冊***
+Learning Java mostly with [Java SE 14 技術手冊](http://books.gotop.com.tw/v_ACL059300)
 
 ## 前言  Preface
 Java 新手上路，請多指教。
