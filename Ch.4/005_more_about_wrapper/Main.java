@@ -3,8 +3,8 @@ public class Main {
     public static void main(String[] args){
         int intData = 9123;
         int divisor = 4;
-
-        /* below shows a deprecated usage of API 
+        /* 
+         * Below shows a deprecated usage of API 
          * well, some warning message should popped up...
          */
         var IntWrapper = new Integer(intData);
@@ -14,10 +14,10 @@ public class Main {
         /* even don't let me use this...QQ */
         // System.out.printf("Applied \"doubleValue()\" and divide by %d : %d", divisor, IntWrapper.doubleValue() / divisor);
         
-        
         System.out.println();
-        /* Auto-boxing,
-         * "LongAutoWrapper" will refer to "Integer" instance
+        /* 
+         * Auto-boxing
+         * LongAutoWrapper" will refer to "Integer" instance
          * Similarly, auto-boxing can also apply to other basic data types
          */
         // e.g.
@@ -37,16 +37,23 @@ public class Main {
         
         /* code below shows some "auto-unboxing operation" */
         
-        /* jshell> Integer number = 10; // notice that if we use "Number" for auto-boxing, error will occur as the cmd below executed 
-        * number ==> 10.0
+        /* 
+         * jshell> Integer number = 10;
+         * number ==> 10.
          * 
-         * jshell> System.out.println(++number); // auto-unboxing and add 1
+         * // notice that if we use "Number" for auto-boxing,
+         * // error will occur as the cmd below executed 
+         * // since number is a double
+         * 
+         * // auto-unboxing and add 1
+         * jshell> System.out.println(++number); 
          * 11
          * 
          * jshell> Boolean toaruBool = true;
          * toaruBool ==> true
          * 
-         * jshell> System.out.println(toaruBool && false); // auto-unboxing and do logic operation
+         * // auto-unboxing and do logic operation
+         * jshell> System.out.println(toaruBool && false); 
          * false
          */
 
@@ -62,7 +69,8 @@ public class Main {
         // Integer tmpNullInt = null; // may be implemented as "Object localObject = null;"
         // int tmpNullIntAssign = tmpNullInt; // error occur during runtime
         
-        /* may be implemented as "int tmpNullIntAssign = localObject.intValue();" 
+        /*  
+         * may be implemented as "int tmpNullIntAssign = localObject.intValue();"
          * which result to "NullPointerException"
          */
 
@@ -75,7 +83,8 @@ public class Main {
         Integer tmp_1 = 200;
         Integer tmp_2 = 200;
         System.out.printf("Is tmp_1 == tmp_2 ? %b\n", tmp_1 == tmp_2); // false!!! so WHY!? OwO
-        /* Let's see how "valueOf()" implement...
+        /* 
+         * Let's see how "valueOf()" implement...
          * 
          * public static Integer valueOf(int i) {
          *     if (i >= IntegerCache.low && i <= IntegerCache.high) // default : low -> -128, high -> 127

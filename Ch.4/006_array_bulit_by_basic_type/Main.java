@@ -4,7 +4,8 @@ public class Main {
     public static void main(String[] args){
         /* Array : built by basic type */
 
-        /* Array IS AN OBJECT in Java!!!!! 
+        /* 
+         * Array IS AN OBJECT in Java!!!!! 
          * See the cute Yellow highlight thanks for Atom Dark Theme OwO
          */
         int [] score = {1, 2, 3, 4, 5, 6, 7, 8};
@@ -18,14 +19,16 @@ public class Main {
         }
         System.out.println();
         
-        /* Actually we have "enhanced for loop" to do the same thing
+        /* 
+         * Actually we have "enhanced for loop" to do the same thing
          * which is also a COMPILER SUGAR, the efficiency won't change
          */
         for (int num : score){
             System.out.printf("%d ", num);
         }
         System.out.println("\n");
-        /* Decompile the code above ...
+        /* 
+         * Decompile the code above ...
          * 
          * int[] num = score;
          * int i = score.length;
@@ -35,7 +38,8 @@ public class Main {
          * }
          */
 
-        /* two dimension array
+        /* 
+         * Two dimension array
          * high layer array is consist of 1D-arrays
          * 
          * For example, the values in 2D-array are "THE REFERENCEs" of 1D-arrays.
@@ -73,6 +77,16 @@ public class Main {
         Arrays.fill(data, 99); // init all value to "99"
         for (int val : data){
             System.out.printf("%d ", val);
+        }
+        System.out.println("\n");
+        
+        /* built by instance */
+        Integer[][] cards = new Integer[2][3]; // all the elements point to "null"
+        for (var i : cards){
+            for (var j : i){
+                System.out.printf("%d ", j);
+            }
+            System.out.println();
         }
         System.out.println();
     }

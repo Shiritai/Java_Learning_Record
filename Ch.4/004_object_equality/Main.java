@@ -3,9 +3,11 @@ import java.math.BigDecimal;
 
 public class Main {
     public static void main(String[] args){
-        /* "new" means "build a new object", 
+        /* 
+         * "new" means "build a new object", 
          * thus the reference of a and b below
-         * are totally different object */
+         * are totally different object
+         */
         var a = new BigDecimal("0.1"); // assign reference to BigDecimal
         var b = new BigDecimal("0.1"); // assign reference to BigDecimal
         var c = a;

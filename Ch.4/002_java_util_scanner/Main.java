@@ -9,7 +9,8 @@ public class Main {
         var guess = -1;
         do {
             System.out.println("Guess a number from 0 - 9");
-            /* readInt()
+            /* 
+             * readInt() :
              * read stdin and check whether there is a blank or a carriage return
              * if yes, it'll try to scan the in_stream as an "integer"
              * Similarly, there some other functions like this:
