@@ -1,5 +1,7 @@
-# Array 複雜度分析
+# Array
 ---
+
+# Array 複雜度分析
 
 ;):):(;( // 太有趣了吧，markdown 語法
 
@@ -44,17 +46,22 @@ $BigO$|$O(1)$|$O(n)$|$O(n)$
 $BigO$|$O(1)$|$O(n)$
 
 # Amortized time complexity 均攤複雜度
+
 ## resize 複雜度分析
+
 #### addLast
 
 設 10 次 addLast 觸發 resize，共 10 次基本操作 + 10 次擴容操作
 
 → n 次 addLast 觸發 resize，共 n 次基本操作 + n 次擴容操作
 因此複雜度應為 $O(\frac{2n}{n}) = O(1)$
+
 #### deleteLast
+
 同樣的，複雜度應為 $O(1)$
 
 ## 複雜度震盪
+
 如在臨界長度連續進行擴容+降容，導致複雜度保持高點 $ = O(n)$
 
 → ***too EAGER*** → 採 ***LAZY*** 策略
