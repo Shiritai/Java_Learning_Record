@@ -7,7 +7,7 @@
 ## 插入元素 : $O(n)$
 
 
-- |最後|最前|隨機
+/|最後|最前|隨機
 :-:|:-:|:-:|:-:
 **對應實作**|addLast(e)|addFirst(e)|insert(index, e)
 $BigO$|$O(1)$|$O(n)$|$O(n)(O(\frac n2))$
@@ -20,7 +20,7 @@ $BigO$|$O(1)$|$O(n)$|$O(n)(O(\frac n2))$
 ## 刪除元素 : $O(n)$
 
 
-- |最後|最前|隨機
+/|最後|最前|隨機
 :-:|:-:|:-:|:-:
 **對應實作**|deleteFirst(e)|deleteLast(e)|delete(index, e)
 $BigO$|$O(1)$|$O(n)$|$O(n)$
@@ -36,7 +36,7 @@ $BigO$|$O(1)$|$O(n)$|$O(n)$
 
 ## 查詢元素 $O(1)→O(n)$
 
-- |已知索引|未知索引
+/|已知索引|未知索引
 :-:|:-:|:-:|:-:
 **對應實作**|getElement(index)|findIndex(e)
 $BigO$|$O(1)$|$O(n)$
