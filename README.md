@@ -6,9 +6,9 @@ Java 新手上路，請多指教。
 ## Environment  環境
 
 ### Java Environment
+
 Java|JRE|JVM
 -|:-:|-
-
 15.0.2|15.0.2+7-27|15.0.2+7-27
 
 Be sure to add `"-encoding UTF-8"` argument before compiling files to make sure that Chinese comments can pass compilation properly.
