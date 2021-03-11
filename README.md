@@ -18,6 +18,7 @@ Undoubtedly, the complicated but brilliant **VSCode**!
 
 ## More Information 相關資訊
 Textbook info : [Java SE 14 技術手冊](http://books.gotop.com.tw/v_ACL059300)
+
 Data Structure with Java : [Play-with-Data-Structures](https://github.com/liuyubobobo/Play-with-Data-Structures)
 
 ## Wallpaper  進版圖
