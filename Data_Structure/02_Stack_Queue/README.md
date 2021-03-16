@@ -1,3 +1,5 @@
+# Stack and Queue
+
 # Stack
 ---
 ## Properties
