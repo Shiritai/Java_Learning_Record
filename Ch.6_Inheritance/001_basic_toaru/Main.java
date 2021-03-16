@@ -27,18 +27,19 @@ public class Main {
          * because of the code above 
          */
         Nouryokusya Eroiko = (Nouryokusya) Kuroko;
+
+        Person Saten = new Person(120, "Saten Ruiko");
+        Saten.setNickName("Lv.5 Urban Legend");
         /* *
          * The code below won't run properly and 
          * "java.lang.ClassCastException" will rise up during runtime 
          * */
-        Person Saten = new Person(120, "Saten Ruiko");
-        Saten.setNickName("Lv.5 Urban Legend");
-        // Nouryokusya Elilokon = (Nouryokusya) Saten; // bad cast
+        Nouryokusya Elilokon = (Nouryokusya) Saten; // bad cast
         /* 
          * Of course the code below won't pass the compiler...
          * "incompatible types" will rise up
          * */
-        // Nouryokusya Elilokon2 = (Nouryokusya) Index;
+        Nouryokusya Elilokon2 = (Nouryokusya) Index;
 
         /* *
          * Since Index, Misaka, Saten are all "Person"

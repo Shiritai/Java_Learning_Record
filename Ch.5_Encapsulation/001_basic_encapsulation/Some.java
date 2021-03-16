@@ -24,8 +24,8 @@ public class Some {
     // with auto-boxing, un-boxing
     public Some (int some_int){
         /* Bad Smell */
-        // this.some_int = some_int; // BAD SMELL, "repetition" may be harmful in programming
         this(some_int, ""); // noted that this line "must" be the first line of this (current) constructor!
+        // this.some_int = some_int; // BAD SMELL, "repetition" may be harmful in programming
         System.out.println("call with int");
     }
 
