@@ -80,4 +80,12 @@ Queue<E>
     int getSize() $O(1)$
     boolean isEmpty() $O(1)$
 
-![image](cycle_queue.jpg)
+## Circular Queue
+```java
+front == back 表 Queue 空了
+
+(back + 1) % capacity == front 表 Queue 滿了
+```
+
+[ref](https://prepinsta.com/data-structures-algorithms/circular-queue/)
+![image](Circular-Queues-in-Data-Structure-and-Algorithms.png)
