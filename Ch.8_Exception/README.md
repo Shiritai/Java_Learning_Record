@@ -61,8 +61,9 @@ try {
 } finally { // 遇到例外時，程式中斷，若有未關閉的資源以及想做個收尾的程式碼，須藉由 finally 來做完成
     /* *
      * finally 無論是否有例外都會執行
-     * 即便 try, catch 裡有 return, 也會先執行 finally 再返回
+     * 即便 try, catch 裡有 return, 也會先執行 finally 再 return
      * */
+    // finally 裡面 「不要 return!」，因為那樣會使 catch 的處理因為優先執行 finally 而被跳過，是很不好的語病
 }
 ```
 
