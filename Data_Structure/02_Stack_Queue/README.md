@@ -42,16 +42,16 @@ Stack<E>
 
 ## Complexity analyze
 
-    ArrayStack<T>
+### ArrayStack<T>
 
-    void push(E) $O(1) avg$
-    E pop() $O(1) avg$
-    E peek() $O(1)$
-    int getSize() $O(1)$
-    boolean isEmpty() $O(1)$
+* void push(E) $O(1) avg$
+* E pop() $O(1) avg$
+* E peek() $O(1)$
+* int getSize() $O(1)$
+* boolean isEmpty() $O(1)$
 
-    All $O(1)$ so happy OwO
-    ($avg$ : 均攤)
+All $O(1)$ so happy OwO
+($avg$ : 均攤)
 
 
 # Queue
@@ -72,15 +72,6 @@ Queue<E>
 5. boolean isEmpty()
 ```
 
-## Complexity analyze
-
-    ArrayStack<T> (implemented with normal array)
-
-    void enqueue(E) $O(1) avg$
-    E dequeue() $O(n)$ // maybe... too big...
-    E getFront() $O(1)$
-    int getSize() $O(1)$
-    boolean isEmpty() $O(1)$
 
 ## Circular Queue
 ```java
@@ -91,3 +82,24 @@ front == back 表 Queue 空了
 
 [ref](https://prepinsta.com/data-structures-algorithms/circular-queue/)
 ![image](Circular-Queues-in-Data-Structure-and-Algorithms.png)
+
+## Complexity analyze
+
+### ArrayQueue<T> (normal queue)
+  
+* void enqueue(E) $O(1) (avg)$
+* E dequeue() $O(n)$ // maybe... too big...
+* E getFront() $O(1)$
+* int getSize() $O(1)$
+* boolean isEmpty() $O(1)$
+  
+  
+### CircularQueue<T> (circular queue)
+  
+* void enqueue(E) $O(1) (avg)$
+* E dequeue() $O(1) (avg)$
+* E getFront() $O(1)$
+* int getSize() $O(1)$
+* boolean isEmpty() $O(1)$
+
+
