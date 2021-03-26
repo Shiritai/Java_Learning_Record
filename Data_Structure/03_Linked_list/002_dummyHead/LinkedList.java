@@ -42,7 +42,7 @@ public class LinkedList<E> {
     
     public void insert(E e, int position){
         if (position < 0 || position > size){
-            throw new IllegalArgument("Position of insertion is out of range!");
+            throw new IllegalArgumentException("Position of insertion is out of range!");
         }
         else {
             Node tmp = dummyHead;
