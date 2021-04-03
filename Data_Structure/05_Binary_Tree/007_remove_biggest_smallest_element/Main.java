@@ -33,6 +33,5 @@ public class Main {
             }
         }
         System.out.println("removeMax seems to work correctly");
-
     }
 }

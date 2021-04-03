@@ -22,3 +22,21 @@
 ### 廣度優先遍歷 -> 用 Queue 輔助，迴圈遍歷
 
 用來更快的尋找目標 -> Algorithm 的 Shortest Path
+
+## Special terms about BST
+
+1. 順序性
+   1. maximum and minimum
+   2. successor and predecessor
+   3. floor (最小上界) and ceil (最大下界) 
+      * 尋找 floor and ceil 不需要目標值真的存在在 BST 中
+      * 如找 45 的 floor and ceil 可能為 41, 50 但不需要 45 存在在整個 BST 中
+   4. rank (某 Node 在 BST 中的排行) and select (在 BST 中排行某某的 Node)
+      * 維護所有子樹的 Size
+      * 如葉子 Node : size = 1
+
+2. 擴展
+   1. size and depth for every Node
+   2. 支持重複元素
+      1. 新增節點時，要加在>= 與 <= 二選一
+      2. 新增維護 count // 跟窩想ㄉ一樣 OwO
