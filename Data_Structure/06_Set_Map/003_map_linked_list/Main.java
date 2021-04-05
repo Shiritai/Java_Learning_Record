@@ -9,28 +9,27 @@ public class Main {
     }
     
     private static void readBook(String bookName){
-        out.println("___" + capitalize(bookName) + "___");
         var book = new ArrayList<String>();
-        FileOperation.readFile(bookName + ".txt", book);
-        out.println("Total words : " + book.size());
-        
-        long start = nanoTime();
-        var set = new LinkedListSet<String>();
-        for (var i : book){
-            set.add(i);
+        if (FileOperation.readFile(bookName + ".txt", book)){
+            out.println("___" + capitalize(bookName) + "___");
+            out.println("Total words : " + book.size());
+            
+            long start = nanoTime();
+            var map = new LinkedListMap<String, Integer>();
+            for (var i : book){
+                if (map.exist(i))
+                    map.change(i, map.get(i) + 1);
+                else 
+                    map.add(i, 1);
+            }
+            long end = nanoTime();
+            out.println("[Linked List Map]");
+            out.println("Total different words : " + map.getSize() + String.format("\nUsed : %f sec", (end - start) / 1000000000.));
+            String word = "pride";
+            out.println(String.format("Frequency of \"%s\" : %d", word, map.get(word)));
+            word = "prejudice";
+            out.println(String.format("Frequency of \"%s\" : %d", word, map.get(word)));
         }
-        long end = nanoTime();
-        out.println("[Linked List Set]");
-        out.println("Total different words : " + set.getSize() + String.format("\nUsed : %f sec", (end - start) / 1000000000.));
-        
-        start = nanoTime();
-        var set2 = new BSTSet<String>();
-        for (var i : book){
-            set.add(i);
-        }
-        end = nanoTime();
-        out.println("[Binary Searching Tree Set]");
-        out.println("Total different words : " + set.getSize() + String.format("\nUsed : %f sec", (end - start) / 1000000000.));
 
     }
 
