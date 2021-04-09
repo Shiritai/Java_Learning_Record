@@ -4,8 +4,8 @@ import java.util.*;
 
 class LinkedList<E> {
 
-    final String doOutOfRangeMsg = "You're assigning a book with bad index, we can still do this to the last position.\nAre you sure you want to do it?";
-    final String confirmMsg = " [Y (y) / N (n)]";
+    private final String doOutOfRangeMsg = "You're assigning a book with bad index, we can still do this to the last position.\nAre you sure you want to do it?";
+    private final String confirmMsg = " [Y (y) / N (n)]";
     Scanner console = new Scanner(in);
 
     class Node {
@@ -23,8 +23,8 @@ class LinkedList<E> {
         }
     }
     
-    Node dummyHead;
-    int size;
+    private Node dummyHead;
+    private int size;
     
     public LinkedList(){
         this.dummyHead = new Node();
