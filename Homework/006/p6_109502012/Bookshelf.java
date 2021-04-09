@@ -114,7 +114,7 @@ public class Bookshelf<E> {
             }
             var tmpOrder = tmpInput.split(" ");
             cmd = Integer.parseInt(getString(tmpOrder, 0));
-            if (cmd == 0){ // for debug and peeking
+            if (cmd == 0){ // for debugging and peeking
                 out.println(bookShelf.toString());
                 tmpInput = console.nextLine();
                 continue;
