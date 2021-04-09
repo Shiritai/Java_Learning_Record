@@ -8,7 +8,7 @@ class LinkedList<E> {
     private final String confirmMsg = " [Y (y) / N (n)]";
     Scanner console = new Scanner(in);
 
-    class Node {
+    protected class Node {
         E e;
         Node next;
         Node(E e, Node next){
