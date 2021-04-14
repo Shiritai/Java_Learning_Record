@@ -1,0 +1,15 @@
+digraph "eroiko.javalearning:mavenTest:jar:1.0-SNAPSHOT" { 
+	"eroiko.javalearning:mavenTest:jar:1.0-SNAPSHOT" -> "org.openjfx:javafx-controls:jar:15.0.1:compile" ; 
+	"eroiko.javalearning:mavenTest:jar:1.0-SNAPSHOT" -> "org.openjfx:javafx-fxml:jar:15.0.1:compile" ; 
+	"eroiko.javalearning:mavenTest:jar:1.0-SNAPSHOT" -> "org.apache.httpcomponents:httpclient:jar:4.5.2:compile" ; 
+	"eroiko.javalearning:mavenTest:jar:1.0-SNAPSHOT" -> "junit:junit:jar:3.8.1:test" ; 
+	"org.openjfx:javafx-controls:jar:15.0.1:compile" -> "org.openjfx:javafx-controls:jar:win:15.0.1:compile" ; 
+	"org.openjfx:javafx-controls:jar:15.0.1:compile" -> "org.openjfx:javafx-graphics:jar:15.0.1:compile" ; 
+	"org.openjfx:javafx-graphics:jar:15.0.1:compile" -> "org.openjfx:javafx-graphics:jar:win:15.0.1:compile" ; 
+	"org.openjfx:javafx-graphics:jar:15.0.1:compile" -> "org.openjfx:javafx-base:jar:15.0.1:compile" ; 
+	"org.openjfx:javafx-base:jar:15.0.1:compile" -> "org.openjfx:javafx-base:jar:win:15.0.1:compile" ; 
+	"org.openjfx:javafx-fxml:jar:15.0.1:compile" -> "org.openjfx:javafx-fxml:jar:win:15.0.1:compile" ; 
+	"org.apache.httpcomponents:httpclient:jar:4.5.2:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.4:compile" ; 
+	"org.apache.httpcomponents:httpclient:jar:4.5.2:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+	"org.apache.httpcomponents:httpclient:jar:4.5.2:compile" -> "commons-codec:commons-codec:jar:1.9:compile" ; 
+ } 
