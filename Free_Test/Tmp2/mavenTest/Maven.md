@@ -13,7 +13,7 @@
 
 1. Download latest Maven
 
-    [Download Maven](https://downloads.apache.org/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.zip) or [Maven Download Page](https://maven.apache.org/download.cgi?Preferred=ftp://ftp.osuosl.org/pub/apache/)
+    [Download Maven](https://downloads.apache.org/maven/maven-3/3.8.1/source/apache-maven-3.8.1-src.zip) or [Maven Download Page](https://maven.apache.org/download.cgi?Preferred=ftp://ftp.osuosl.org/pub/apache/)
 
     After downloading, unzip the file, put it to a proper directory you prefer and remember the path of it!
 
