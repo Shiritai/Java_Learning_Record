@@ -27,6 +27,22 @@ Example|add(), remove()|iterator()|
 :-:|:-:|:-:|:-:|:-:
 Function|物件有索引|物件不重複|隊列|雙向隊列
 
+**Java 判斷東西是否重複 : 呼叫 $hashCode()$ 以及 $equals()$ --> Java 規格書建議兩者都實作**
+
+```mermaid
+graph BT
+    abMap[AbstractMap] --> map[Map]
+    hsMap(HashMap) --> abMap
+    trMap(TreeMap) --> abMap
+    pro(Properties) --> hsTb[HashTable]
+    hsTb --> dic[Dictionary]
+    hsTb --> map
+```
+
+1. 其中 Dictionary 以及 HashTable 為老 API，不用為妙，不過 Properties 常用
+2. TreeMap 須 key 實作 Comparable 或 建構時指定實作 Comparator 介面的物件
+
+
 <!-- ```flow
 st=>start: Start
 e=>end: End

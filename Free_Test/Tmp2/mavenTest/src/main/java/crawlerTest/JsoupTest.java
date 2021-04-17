@@ -65,7 +65,11 @@ public class JsoupTest {
         // var eleAttr = doc.getElementsByAttribute("class").first().text();
         // System.out.println(eleAttr.length() != 0 ? eleAttr : "<Empty></Empty>");
         var eleAttrVal = doc.getElementsByAttributeValue("href", "view-source:https://s3.zerochan.net/Jujutsu.Kaisen.240.3293712.jpg").first().text();
-        System.out.println(eleAttrVal.length() != 0 ? eleAttrVal : "<Empty></Empty>");
+        System.out.println(eleAttrVal.length() != 0 ? eleAttrVal : "<Empty></Empty>");   
+    }
+
+    @Test
+    public static void testDomData() throws Exception {
         
     }
     
