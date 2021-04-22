@@ -42,20 +42,20 @@ public class App /* extends Application */{
         // String gitHubUrl = "https://github.com/Shiritai";
         // crawlerTest.crawlerTest.testHttpConfig(gitHubUrl);
 
-        // String awsWPP = "https://wallhaven.cc/";
-        // String monogatari = "/tag/132";
-        // try {
-        //     crawlerTest.JsoupTest.testUrl(awsWPP + monogatari);
-        // } catch (Exception e) {
-        //     e.printStackTrace();
-        // }
-
-        String somePath = "D:/ShiZu_Code/Java/Java_Learning_Record/Free_Test/Tmp2/mavenTest/src/main/resources/html_src/https _wallhaven.cc_search q=id 132.html";
+        String awsWPP = "https://wallhaven.cc/";
+        String monogatari = "/tag/132";
         try {
-            crawlerTest.JsoupTest.testParseHtmlString(somePath, "title");
+            crawlerTest.JsoupTest.testUrl(awsWPP + monogatari);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        // String somePath = "D:/ShiZu_Code/Java/Java_Learning_Record/Free_Test/Tmp2/mavenTest/src/main/resources/html_src/https _wallhaven.cc_search q=id 132.html";
+        // try {
+        //     crawlerTest.JsoupTest.testParseHtmlString(somePath, "title");
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
 
 
         // String [] justTest = new String [1];

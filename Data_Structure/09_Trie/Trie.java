@@ -13,7 +13,7 @@ public class Trie {
             this(false);
         }
     }
-
+    
     private Node root;
     private int size;
 
@@ -34,7 +34,7 @@ public class Trie {
             }
             cur = cur.next.get(chr);
         }
-        if (!cur.isWord){ // WHY???
+        if (!cur.isWord){
             cur.isWord = true;
             ++size;
         }
@@ -49,5 +49,17 @@ public class Trie {
             cur = cur.next.get(chr);
         }
         return cur.isWord;
+    }
+
+    /* 超級高的效率查詢前綴, 因此 Trie 又稱前綴樹 */
+    public boolean isPrefix(String prefix){
+        Node cur = root;
+        for (var chr : prefix.toCharArray()){
+            if (cur.next.get(chr) == null){
+                return false;
+            }
+            cur = cur.next.get(chr);
+        }
+        return true;
     }
 }
