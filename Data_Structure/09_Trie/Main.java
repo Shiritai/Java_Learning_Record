@@ -3,9 +3,27 @@ import static java.lang.System.*;
 
 public class Main {
     public static void main(String [] args){
-        readBook("pride-and-prejudice");
-        out.println();
-        readBook("a-tale-of-two-cities");
+        // readBook("pride-and-prejudice");
+        // out.println();
+        // readBook("a-tale-of-two-cities");
+        
+        var tr = new Trie();
+        var str = new String [] {"cat", "cause", "cute", "catch", "capacity"};
+        tr.add(str[0]);
+        tr.add(str[1]);
+        tr.add(str[2]);
+        tr.add(str[3]);
+        tr.add(str[4]);
+        out.println(tr.getSize());
+        out.println(tr.contains(str[1]));
+        out.println("------ After delete ------");
+        tr.delete(str[0]);
+        out.println(tr.getSize());
+        out.println(tr.contains(str[0]));
+        out.println(tr.contains(str[1]));
+        out.println(tr.contains(str[2]));
+        out.println(tr.contains(str[3]));
+        out.println(tr.contains(str[4]));
     }
     
     private static void readBook(String bookName){

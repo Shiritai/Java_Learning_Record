@@ -10,3 +10,26 @@ class Node {
     Map<char, Node> next;
 }
 ```
+
+## 問題 : 空間消耗過大
+
+解決方法
+
+1. Compressed Trie : 將單鏈字符串何在一起存, 在加入新字需要時才可能擴展 -> 但維護成本增加
+2. Ternary Search Trie : 三分搜索 Trie : 只有 3 個子樹, 犧牲一定時間
+
+## 計算機科學中的字串話題
+
+### 子串查詢 : 算法
+
+1. KMP
+2. Boyer-Moore
+3. Rabin-Karp
+
+### 文件壓縮
+
+### 模式匹配 (Regex)
+
+### 編譯原理 (語彙, 語法, 語意分析)
+
+### DNA

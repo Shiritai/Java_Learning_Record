@@ -1,0 +1,37 @@
+public class QuickUnion implements UnionFind {
+    private int [] parent;
+
+    public QuickUnion(int size){
+        parent = new int[size];
+        for (int i = 0; i < size; ++i) parent[i] = i;
+    }
+
+    @Override
+    public int getSize(){
+        return parent.length;
+    }
+    
+    private int find(int index){
+        assert index >= 0 && index < parent.length : "Index out of range!";
+        while (parent[index] != index){
+            index = parent[index];
+        }
+        return index;
+    }
+    
+    @Override 
+    public boolean isConnected(int e1, int e2) {
+        assert e1 >= 0 && e1 < parent.length && e2 >= 0 && e2 < parent.length : "Index out of range!";
+        return find(e1) == find(e2);
+    }
+    
+    @Override 
+    public void union(int e1, int e2){
+        assert e1 >= 0 && e1 < parent.length && e2 >= 0 && e2 < parent.length : "Index out of range!";
+        int parent1 = find(e1);
+        int parent2 = find(e2);
+        if (parent1 != parent2){
+            parent[parent1] = parent2;
+        }
+    }
+}

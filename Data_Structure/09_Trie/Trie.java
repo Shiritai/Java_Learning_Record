@@ -1,4 +1,5 @@
 import java.util.TreeMap;
+import java.util.Stack;
 
 public class Trie {
     private class Node {
@@ -13,6 +14,15 @@ public class Trie {
             this(false);
         }
     }
+
+    // private class tuple<K, V>{
+    //     public final K key;
+    //     public final V value;
+    //     tuple(K key, V value){
+    //         this.key = key;
+    //         this.value = value;
+    //     }
+    // }
     
     private Node root;
     private int size;
@@ -59,6 +69,35 @@ public class Trie {
                 return false;
             }
             cur = cur.next.get(chr);
+        }
+        return true;
+    }
+
+    /* 嘗試刪除 word, 若 word 不存在返回 false, 存在返回 true */
+    public boolean delete(String word){
+        Node cur = root;
+        var stack = new Stack<Node>();
+        // boolean existOtherWord = false;
+        for (var chr : word.toCharArray()){
+            if (cur.next.get(chr) == null){
+                return false; // 沒有此字
+            }
+            stack.push(cur);
+            cur = cur.next.get(chr);
+        }
+        stack.push(cur);
+        if (cur.isWord){
+            cur.isWord = false;
+            this.size--;
+        }
+        while (!stack.isEmpty()){
+            cur = stack.pop();
+            if (cur.next == null){
+                cur = null;
+            }
+            else {
+                break;
+            }
         }
         return true;
     }
