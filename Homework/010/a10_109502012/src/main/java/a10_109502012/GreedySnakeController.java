@@ -3,7 +3,6 @@ package a10_109502012;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,7 +13,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
-public class MazeController implements EventHandler<KeyEvent>, Initializable{
+public class GreedySnakeController implements EventHandler<KeyEvent>, Initializable{
     int headRowIndex = 0;
     int headColIndex = 0;
     int backRowIndex = 0;
@@ -34,6 +33,7 @@ public class MazeController implements EventHandler<KeyEvent>, Initializable{
     
     @Override
     public void handle(KeyEvent e) {
+        System.out.println("Got key");
         if (e.getCode().equals(KeyCode.UP)){
             backRowIndex = headRowIndex;    
             --headRowIndex;
@@ -50,22 +50,26 @@ public class MazeController implements EventHandler<KeyEvent>, Initializable{
             backColIndex = headColIndex;    
             --headColIndex;
         }
-        refresh();
-
+        
         /* Check if lose */
         if (headRowIndex < 0 || headRowIndex >= maxRowIndex || headColIndex < 0 || headColIndex >= maxColIndex){
-            messageText.setText("你輸了!!!");
+            // messageText.setText("你輸了!!!");
             goBackButton.requestFocus();
         }
         /* Check if win */
         if (headRowIndex == winRowIndex && headColIndex == winColIndex){
-            messageText.setText("移動到出口了!!!");
+            // messageText.setText("移動到出口了!!!");
             goBackButton.requestFocus();
         }
+        
+        refresh();
     }
 
     private void refresh() {
-        GridPane.setRowIndex()
+        GridPane.setRowIndex(nadekoHead, headRowIndex);
+        GridPane.setColumnIndex(nadekoHead, headColIndex);
+        GridPane.setRowIndex(nadekoBack, backRowIndex);
+        GridPane.setColumnIndex(nadekoBack, backColIndex);
     }
 
     @Override
@@ -74,6 +78,7 @@ public class MazeController implements EventHandler<KeyEvent>, Initializable{
         winColIndex = GridPane.getColumnIndex(winPane);
         maxRowIndex = mazeGridPane.getRowCount();
         maxColIndex = mazeGridPane.getColumnCount();
+        System.out.println("Ready to play");
         goBackButton.setOnMouseClicked(e -> MainApp.mainStage.setScene(MainApp.menuScene));
     }
     
