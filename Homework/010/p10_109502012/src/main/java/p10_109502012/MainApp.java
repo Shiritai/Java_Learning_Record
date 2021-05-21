@@ -1,4 +1,4 @@
-package a10_109502012;
+package p10_109502012;
 
 import java.io.*;
 import javafx.application.Application;
@@ -20,7 +20,7 @@ public class MainApp extends Application{
     public void start (Stage mainStage) throws IOException{
         MainApp.mainStage = mainStage;
         menuScene = new Scene(FXMLLoader.load(getClass().getResource("Menu.fxml")));
-        mainStage.setTitle("Greedy Snake");
+        mainStage.setTitle("Walk to Exit");
         mainStage.setScene(menuScene);
         mainStage.setResizable(false);
         mainStage.show();

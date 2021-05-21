@@ -6,8 +6,8 @@ public class Main {
         var bstMap = new BSTMap<String, Integer>();
         readBook("pride-and-prejudice", bstMap, "Binary Search Tree Map");
         out.println();
-        var AVLMap = new AVLTree<String, Integer>();
-        readBook("a-tale-of-two-cities", AVLMap, "AVLMap, AVL Tree Map");
+        var AVLMap = new AVLMap<String, Integer>();
+        readBook("pride-and-prejudice", AVLMap, "Binary Search Tree Map");
     }
     
     private static void readBook(String bookName, Map<String, Integer> map, String dsName){
@@ -16,6 +16,8 @@ public class Main {
             out.println("___" + capitalize(bookName) + "___");
             out.println("Total words : " + book.size() + "\n");
         }
+
+        // book.sort((a, b) -> a.compareTo(b)); // 直接先排好序, 比較退化成鏈結序列的 BST 與 AVLTree 的效能差距
 
         long start = nanoTime();
         for (var i : book){
@@ -31,7 +33,23 @@ public class Main {
         out.println(String.format("Frequency of \"%s\" : %d", word, map.get(word)));
         word = "prejudice";
         out.println(String.format("Frequency of \"%s\" : %d", word, map.get(word)));
-
+        if (map instanceof AVLMap){
+            var tmp = (AVLMap) map;
+            out.print("Is BST : ");
+            out.println(tmp.isBST());
+            out.print("Is Balanced : ");
+            out.println(tmp.isBalanced());
+            
+            book.forEach(w -> {
+                tmp.remove(w);
+                if (!tmp.isBST()){
+                    throw new RuntimeException("Not BST!");
+                }
+                if (!tmp.isBalanced()){
+                    throw new RuntimeException("Not Balanced!");
+                }
+            });
+        }
     }
 
     private static String capitalize(String tmp){

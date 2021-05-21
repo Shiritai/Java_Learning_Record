@@ -1,4 +1,4 @@
-package a10_109502012;
+package p10_109502012;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,19 +14,16 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
-public class GreedySnakeController implements Initializable{
+public class MazeController implements Initializable{
     
     @FXML private GridPane mazeGridPane;
-    @FXML private Pane nadekoBack;
-    @FXML private Pane nadekoHead;
+    @FXML private Pane walk;
     @FXML private Pane winPane;
     @FXML private Text messageText;
     @FXML private Button goBackButton;
     
-    int headRowIndex = 0;
-    int headColIndex = 0;
-    int backRowIndex = 0;
-    int backColIndex = 0;
+    int walkRowIndex = 0;
+    int walkColIndex = 0;
     private boolean isChange = false;
     private BooleanProperty youWin = new SimpleBooleanProperty(false);
     private BooleanProperty youLose = new SimpleBooleanProperty(false);
@@ -65,44 +62,39 @@ public class GreedySnakeController implements Initializable{
         });
 
         MainApp.mainStage.addEventFilter(KeyEvent.KEY_PRESSED, e -> {
-            backRowIndex = headRowIndex;  
-            backColIndex = headColIndex; 
-            
             if (e.getCode().equals(KeyCode.SPACE)){
-                headRowIndex = 0;
-                headColIndex = 0;
-                backRowIndex = 0;
-                backColIndex = 0;
+                walkRowIndex = 0;
+                walkColIndex = 0;
                 isChange = true;
                 youWin.set(false);
                 youLose.set(false);
             }
             if (!youWin.getValue() && !youLose.getValue()){
                 if (e.getCode().equals(KeyCode.UP)){
-                    --headRowIndex;
+                    --walkRowIndex;
                     isChange = true;
                 }
                 else if (e.getCode().equals(KeyCode.DOWN)){
-                    ++headRowIndex;
+                    ++walkRowIndex;
                     isChange = true;
                 }
                 else if (e.getCode().equals(KeyCode.RIGHT)){
-                    ++headColIndex;
+                    ++walkColIndex;
                     isChange = true;
                 }
                 else if (e.getCode().equals(KeyCode.LEFT)){
-                    --headColIndex;
+                    --walkColIndex;
                     isChange = true;
                 }
             }
             if (isChange){
                 /* Check if lose */
-                if (headRowIndex < 0 || headRowIndex >= maxRowIndex || headColIndex < 0 || headColIndex >= maxColIndex){
+                if (walkRowIndex < 0 || walkRowIndex >= maxRowIndex || walkColIndex < 0 || walkColIndex >= maxColIndex){
                     youLose.set(true);
                 }
                 else {
                     /* Check if win */
-                    if (headRowIndex == winRowIndex && headColIndex == winColIndex){
+                    if (walkRowIndex == winRowIndex && walkColIndex == winColIndex){
                         youWin.setValue(true);
                     }
                     refresh();
@@ -114,10 +106,7 @@ public class GreedySnakeController implements Initializable{
     }
 
     private void refresh() {
-        GridPane.setRowIndex(nadekoHead, headRowIndex);
-        GridPane.setColumnIndex(nadekoHead, headColIndex);
-        GridPane.setRowIndex(nadekoBack, backRowIndex);
-        GridPane.setColumnIndex(nadekoBack, backColIndex);
+        GridPane.setRowIndex(walk, walkRowIndex);
+        GridPane.setColumnIndex(walk, walkColIndex);
     }
-    
 }

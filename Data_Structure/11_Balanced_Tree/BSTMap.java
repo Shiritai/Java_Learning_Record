@@ -100,10 +100,19 @@ public class BSTMap<K extends Comparable<K>, V> implements Map<K, V> {
                 }
                 else { // both of cur's child exist!
                     Node successor = cur.right;
-                    while (successor.left != null)
+                    Node parentSuc = null;
+                    while (successor.left != null){
+                        parentSuc = successor;
                         successor = successor.left;
+                    }
+                    
                     successor.left = cur.left;
-                    successor.right = cur.right;
+                    
+                    if (parentSuc != null){
+                        parentSuc.left = successor.right;
+                        successor.right = cur.right;
+                    }
+
                     cur.left = cur.right = null;
                     return successor;
                 }

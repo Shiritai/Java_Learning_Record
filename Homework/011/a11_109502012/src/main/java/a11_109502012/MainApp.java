@@ -1,4 +1,4 @@
-package a10_109502012;
+package a11_109502012;
 
 import java.io.*;
 import javafx.application.Application;
@@ -10,7 +10,7 @@ import javafx.stage.*;
 public class MainApp extends Application{
     
     public static Stage mainStage;
-    public static Scene menuScene;
+    public static Scene scene;
 
     public static void main(String [] args){
         launch(args);
@@ -19,9 +19,10 @@ public class MainApp extends Application{
     @Override
     public void start (Stage mainStage) throws IOException{
         MainApp.mainStage = mainStage;
-        menuScene = new Scene(FXMLLoader.load(getClass().getResource("Menu.fxml")));
-        mainStage.setTitle("Greedy Snake");
-        mainStage.setScene(menuScene);
+        scene = new Scene(FXMLLoader.load(getClass().getResource("Game.fxml")));
+        mainStage.setTitle("GAME");
+        scene.getRoot().requestFocus();
+        mainStage.setScene(scene);
         mainStage.setResizable(false);
         mainStage.show();
 
