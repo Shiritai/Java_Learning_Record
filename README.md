@@ -22,6 +22,6 @@ Textbook info : [Java SE 14 技術手冊](http://books.gotop.com.tw/v_ACL059300)
 Data Structure with Java : [Play-with-Data-Structures](https://github.com/liuyubobobo/Play-with-Data-Structures)
 
 ## Wallpaper  進版圖
-> ん？　どうしてさぼってんの？　それじゃあ...あんたを殺すしかないじゃない？ *木津千里*
+> ん？　まださぼってんの？　それじゃあ...あんたを殺すしかないじゃない？ *木津千里*
 
 ![image](wallpaper416.jpg)
