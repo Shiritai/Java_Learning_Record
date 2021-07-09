@@ -2,7 +2,7 @@
  * Author : Shiritai (楊子慶, or Eroiko on Github) at 2021/07/14.
  * See https://github.com/Shiritai/wallpaper_master for more information.
  * Created using VSCode.
- * This is a LLRBT, without implementation of deleting nodes
+ * This is a LLRBT, without implementation of node deletion
  */
 
 public class RedBlackTree<K extends Comparable<K>, V> {
