@@ -1,9 +1,16 @@
+/*
+ * Author : Shiritai (楊子慶, or Eroiko on Github) at 2021/07/14.
+ * See https://github.com/Shiritai/wallpaper_master for more information.
+ * Created using VSCode.
+ * This is a LLRBT, without implementation of deleting nodes
+ */
 
 public class RedBlackTree<K extends Comparable<K>, V> {
+    
     private static final boolean RED = true;
     private static final boolean BLACK = false;
     
-    private class Node{
+    private class Node {
         public K key;
         public V value;
         public Node left, right;
@@ -13,7 +20,7 @@ public class RedBlackTree<K extends Comparable<K>, V> {
             this.key = key;
             this.value = value;
             this.left = this.right = null;
-            this.color = RED;
+            this.color = RED; // 紅色表要跟其他節點融合
         }
     }
 

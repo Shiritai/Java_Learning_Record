@@ -12,7 +12,7 @@ import java.util.Scanner;
 // import java.io.IOException;
 // import javafx.application.Application;
 // import javafx.fxml.FXMLLoader;
-// import javafx.scene.*;
+// ru阿太小import javafx.scene.*;
 // import javafx.stage.Stage;
 /**
  * Hello world!
