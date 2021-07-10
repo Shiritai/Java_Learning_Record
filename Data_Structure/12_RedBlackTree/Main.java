@@ -14,7 +14,7 @@ public class Main {
         // readBook("pride-and-prejudice", RBMap, "Red Black Tree Map");
         // out.println("\n\n");
 
-        // pureAddMap(200000000);
+        // pureAddMap(10000000);
         pureSortedAddMap(20000000);
     }
 
@@ -38,7 +38,7 @@ public class Main {
         System.out.println("AVL : " + (end - start) / 1000000000. + " s");
         
         start = System.nanoTime();
-        var rb = new AVLMap<Integer, Object>();
+        var rb = new RedBlackMap<Integer, Object>();
         data.forEach(i -> rb.add(i, null));
         end = System.nanoTime();
         System.out.println("Red Black : " + (end - start) / 1000000000. + " s");
@@ -59,7 +59,7 @@ public class Main {
         System.out.println("AVL : " + (end - start) / 1000000000. + " s");
         
         start = System.nanoTime();
-        var rb = new AVLMap<Integer, Object>();
+        var rb = new RedBlackMap<Integer, Object>();
         data.forEach(i -> rb.add(i, null));
         end = System.nanoTime();
         System.out.println("Red Black : " + (end - start) / 1000000000. + " s");
